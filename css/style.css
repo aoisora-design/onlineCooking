@@ -85,10 +85,10 @@ body {
     position: relative;
     background-image: url(../img/kv.jpg);
     background-repeat: no-repeat;
-    /*background-size: 116%;*/
-    background-size: cover;
+    background-size: 116%;
+    /*background-size: cover;*/
 
-    background-position: 25% 54%;
+    background-position: 10% 54%;
     height: 580px;
 }
 @media screen and (min-width: 500px) {
