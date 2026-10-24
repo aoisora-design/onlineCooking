@@ -199,6 +199,112 @@ body {
     font-size: 2.2rem;
 }
 
+/* KV heading: keep it outside the flow on wider screens so existing content
+   stays in place; the mobile layout places it in the content flow. */
+.kv-heading {
+    position: absolute;
+    bottom: calc(100% + 12px);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #294332;
+    font-weight: bold;
+}
+.kv-heading p {
+    display: inline-block;
+    font-size: 1.8rem;
+    line-height: 1.4;
+    background: linear-gradient(transparent 68%, #ffe98a 68%);
+}
+.kv-heading h2 {
+    font-size: 2.8rem;
+    line-height: 1.3;
+}
+
+@media screen and (max-width: 767px) {
+    .kv {
+        height: calc(89vw + 270px);
+    }
+    .kv-logo,
+    .kv-copy-box,
+    .kv-content {
+        z-index: 1;
+    }
+    .kv-logo {
+        width: 144px;
+        top: 22px;
+        left: 4.33%;
+    }
+    .kv-copy-box {
+        top: 112px;
+        width: 61%;
+    }
+    .kv-content {
+        top: calc(89vw + 12px);
+        bottom: auto;
+        padding: 0 10px;
+    }
+    .kv-heading {
+        position: static;
+        margin-bottom: 12px;
+    }
+    .kv-heading h2 {
+        font-size: 2.8rem;
+    }
+    .kv-content-point-box {
+        display: flex;
+        gap: 12px;
+        margin: 0 -5px;
+    }
+    .kv-content-point {
+        display: flex;
+        flex: 1;
+        min-width: 0;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #86a879;
+        border-radius: 24px;
+        background-color: #fff;
+        color: #6f8e62;
+        text-align: center;
+    }
+    .kv-content-copy {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+    .kv-content-copy strong {
+        display: block;
+        font-size: 1.6rem;
+    }
+    .kv-content-txt {
+        margin-top: 8px;
+        font-size: 1.6rem;
+    }
+    .kv-content-txt strong {
+        font-size: 2.4rem;
+    }
+    .kv-content .btn {
+        margin: 18px 0 0;
+    }
+    .kv-content .btn-link {
+        font-size: 2rem;
+        line-height: 62px;
+    }
+}
+@media screen and (max-width: 340px) {
+    .kv-content-copy {
+        font-size: 1.6rem;
+    }
+}
+@media screen and (min-width: 500px) and (max-width: 767px) {
+    .kv-content-point-box {
+        width: 100%;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+}
+
 /* fixed-header */
 .fixed-header {
     position: fixed;
