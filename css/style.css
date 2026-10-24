@@ -9,16 +9,7 @@ body {
     font-size: 1.6rem;/*16px*/
     color: #333;
 }
-/* パソコンでは改行を消す */
-.br-sp {
-    display: none;
-}
-/* スマホ,タブレットでは改行タグを表示する */
-@media screen and (max-width: 900px) {
-    .br-sp {
-        display: inline;
-    }
-}
+
 .wrapper {
     width: 100%;
 }
@@ -95,21 +86,23 @@ body {
 /* kv */
 .kv {
     position: relative;
-    background-image: url(../img/kv-sp.jpg);
+    background-image: url(../img/bg-kv-sp.png);
     background-repeat: no-repeat;
     /*background-size: 120%;*/
-    background-size: cover;
-    background-position: 0% 100%;
+    background-size: 100% auto;
+    background-position: 0 0;
+    background-color: #EFF4F8;
     height: 600px;
 }
+/*
 @media screen and (min-width: 430px) {
     .kv {
         background-position: 0% center;
     }
-}
+}*/
 @media screen and (min-width: 768px) {
     .kv {
-        background-image: url(../img/kv-pc.jpg);
+        background-image: url(../img/bg-kv-pc.png);
         background-position: 50% 58%;
     }
 }
@@ -121,11 +114,18 @@ body {
 }
 .kv-copy-box {
     position: absolute;
-    top: 180px;
-    left: 5%;
+    top: 110px;
+    left: 4.33%;/* 17/393*100 */
+    width: 62.5%;/* 245.5/393*100 */
 }
 .kv-copy {
-    width: 73%;
+    display: block;
+    width: 100%;/*73*/
+}
+.kv-copy img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 @media screen and (min-width: 768px) {
     .kv-copy {
@@ -171,7 +171,6 @@ body {
     position: absolute;
     bottom: 5%;
     left: 5%;
-    background-color: rgb(255 255 255 / 80%);
     width: 90%;
     padding: 10px;
 }
