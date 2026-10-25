@@ -93,52 +93,72 @@ body {
     background-color: #EFF4F8;
     height: calc(89vw + 270px);
 }
-/*
-@media screen and (min-width: 430px) {
-    .kv {
-        background-position: 0% center;
-    }
-}*/
 @media screen and (min-width: 768px) {
+    .kv-shell {
+        background-color: #F3F3F3;
+    }
     .kv {
         background-image: url(../img/bg-kv-pc.png);
-        background-position: 50% 58%;
-        height: 600px;
+        background-position: 50% 0;
+        height: 660px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    .kv {
+        background-size: auto 100%;
     }
 }
 .kv-logo {
-    width: 144px;
+    width: 36.6%;/* 144/393*100 */
     position: absolute;
     top: 22px;
     left: 4.33%;
 }
+@media screen and (min-width: 600px) and (max-width: 767px) {
+    .kv-logo {
+        width: 200px;
+    }
+}
 @media screen and (min-width: 768px) {
     .kv-logo {
-        width: 172px;
-        top: 15px;
+        width: 220px;
+        top: 28px;
         left: 5%;
     }
 }
 .kv-copy-box {
     position: absolute;
-    top: 112px;
+    top: clamp(100px, calc(27.4vw + 12.3px), 120px);
     left: 4.33%;/* 17/393*100 */
-    width: 61%;
+    width: 62.5%;/* 245.5/393*100 */
+}
+@media screen and (min-width: 500px) and (max-width: 599px) {
+    .kv-copy-box {
+        top: 130px;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 699px) {
+    .kv-copy-box {
+        top: 145px;
+        width: 58%;
+    }
+}
+@media screen and (min-width: 700px) and (max-width: 767px) {
+    .kv-copy-box {
+        top: 155px;
+        width: 58%;
+    }
 }
 @media screen and (min-width: 768px) {
     .kv-copy-box {
-        top: 110px;
-        width: 62.5%;/* 245.5/393*100 */
+        top: 155px;
+        left: 6.6%;/* 66/1000*100 */
+        width: 450px;/* 450px */
     }
 }
 .kv-copy {
     display: block;
     width: 100%;/*73*/
-}
-@media screen and (min-width: 768px) {
-    .kv-copy {
-        width: 68%;
-    }
 }
 .kv-copy img {
     display: block;
@@ -156,10 +176,11 @@ body {
 }
 @media screen and (min-width: 768px) {
     .kv-content {
-        top: auto;
-        bottom: 12%;
-        width: 350px;
-        padding: 10px;
+        top: 326px;
+        bottom: auto;
+        width: 468px;
+        padding: 20px;
+        background-color: #EFF4F8;
     }
 }
 .kv-heading {
@@ -171,22 +192,41 @@ body {
     font-weight: bold;
     margin-bottom: 12px;
 }
-@media screen and (min-width: 768px) {
-    .kv-heading {
-        position: absolute;
-        bottom: calc(100% + 12px);
-        margin-bottom: 0;
-    }
-}
 .kv-heading p {
     display: inline-block;
     font-size: 1.8rem;
     line-height: 1.4;
     background: linear-gradient(transparent 68%, #ffe98a 68%);
 }
+@media screen and (min-width: 768px) {
+    .kv-heading p {
+        font-size: 2.0rem;
+    }
+}
 .kv-heading h2 {
     font-size: 2.4rem;
     line-height: 1.3;
+}
+@media screen and (min-width: 768px) {
+    .kv-heading h2 {
+        font-size: 2.8rem;
+    }
+}
+.kv-content-point-box {
+    display: flex;
+    gap: 12px;
+}
+.kv-content-point {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #86a879;
+    border-radius: 24px;
+    background-color: #fff;
+    color: #6f8e62;
+    text-align: center;
 }
 .kv-content-copy {
     text-align: center;
@@ -195,13 +235,15 @@ body {
 }
 @media screen and (min-width: 768px) {
     .kv-content-copy {
-        font-size: 1.8rem;
-        line-height: 1.5;
+        font-size: 1.5rem;
     }
 }
-@media screen and (max-width: 340px) {
-    .kv-content-copy {
-        font-size: 1.2rem;
+.kv-content-copy strong {
+    display: block;
+}
+@media screen and (min-width: 768px) {
+    .kv-content-copy strong {
+        font-size: 1.7rem;
     }
 }
 .kv-content-txt {
@@ -212,7 +254,7 @@ body {
 }
 @media screen and (min-width: 768px) {
     .kv-content-txt {
-        font-size: 1.4rem;
+        font-size: 2rem;
         margin-top: 0;
     }
 }
@@ -221,7 +263,7 @@ body {
 }
 @media screen and (min-width: 768px) {
     .kv-content-txt strong {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
     }
 }
 
@@ -232,25 +274,12 @@ body {
         z-index: 1;
     }
     .kv-content-point-box {
-        display: flex;
-        gap: 12px;
         margin: 0 -5px;
     }
     .kv-content-point {
-        display: flex;
-        flex: 1;
-        min-width: 0;
         min-height: 44px;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid #86a879;
-        border-radius: 24px;
-        background-color: #fff;
-        color: #6f8e62;
-        text-align: center;
     }
     .kv-content-copy strong {
-        display: block;
         font-size: 1.4rem;
     }
     .kv-content .btn {
@@ -264,7 +293,11 @@ body {
         margin: 0 auto;
     }
 }
-
+@media screen and (min-width: 768px) {
+    .kv-content-point {
+        min-height: 52px;
+    }
+}
 /* fixed-header */
 .fixed-header {
     position: fixed;
