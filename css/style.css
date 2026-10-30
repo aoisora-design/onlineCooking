@@ -35,13 +35,11 @@ body {
     }
 }
 .section-content-list {
-    list-style-type: none!important;
     max-width: 350px;
     width: 100%;
     margin: 0 auto;
 }
 .section-content-txt {
-    list-style-type: none!important;
     line-height: 2.25;
 }
 
@@ -387,7 +385,10 @@ body {
         align-items: center;
     }
 }
-
+.worry .section-content-list {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
 .worry-content-img-box {
     margin-top: 24px;
 }
@@ -406,6 +407,7 @@ body {
 .worry-content-img-box img {
     border-radius: 16px;
 }
+
 /* about */
 .about-shell {
     background-image: url(../img/bg_about.webp);
@@ -771,18 +773,26 @@ body {
     padding: 4px;
 }
 .price .section-content-list {
-    max-width: 310px;
+    /*max-width: 310px;*/
     margin-top: 24px;
 }
 .price .section-content-txt {
+    position: relative;
+    padding-left: 1.5em;
     list-style-type: none!important;
-    line-height: 2.25;
+    line-height: 1.6;
+    margin-bottom: 0.8em;
+}
+.price .section-content-txt:last-child {
+    margin-bottom: 0;
 }
 .price .section-content-txt::before {
+    position: absolute;
+    left: 0;
+    top: 0.05em;
     font-family: "Font Awesome 5 Free";
     content: "\f00c";
     font-weight: 900;
-    padding-right : 5px;
 }
 /* last */
 .last-shell {
