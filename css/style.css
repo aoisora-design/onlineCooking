@@ -706,8 +706,8 @@ body {
     font-weight: bold;
 }
 @media screen and (min-width: 768px) {
-.user-copy {
-    margin-top: 8px;
+    .user-copy {
+        margin-top: 8px;
 }
 }
 .user-txt {
@@ -715,6 +715,11 @@ body {
 }
 .user-img-box {
     margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+    .user-img-box {
+        margin-left: 0;
+    }
 }
 .user-img-box img {
     width: 140px;
