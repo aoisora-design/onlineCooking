@@ -15,7 +15,6 @@ body {
 }
 @media screen and (min-width: 768px) {
     .wrapper {
-        width: 100%;
         max-width: 1000px;
         margin: 0 auto;
     }
@@ -24,7 +23,6 @@ body {
 .section-content {
     width: 90%;
     margin: 0 auto;
-/*    padding-bottom: 40px;*/
 }
 .section-heading {
     font-size: 2.4rem;
@@ -441,27 +439,6 @@ body {
         padding: 20px 0;
     }
 }
-/*
-.about-heading-box .section-heading::before,
-.about-heading-box .section-heading::after {
-    content: "";
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0 50%;
-    width: 31px;
-    height: 36px;
-    vertical-align: middle;
-.about-heading-box .section-heading::before {
-    background-image: url(../img/icon_star_L.png);
-    margin-right: 12px;
-}
-.about-heading-box .section-heading::after {
-    background-image: url(../img/icon_star_R.png);
-    margin-left: 12px;
-}
-}*/
-
 .about-lead {
     text-align: center;
     margin-top: 30px;
@@ -536,7 +513,6 @@ body {
     font-weight: bold;
     margin-left: 0;
 }
-
 .about-txt {
     margin-left: 0;
 }
@@ -669,11 +645,6 @@ body {
         margin-top: 4px;
     }
 }
-/*
-.detail-txt {
-    margin-top: 10px;
-}*/
-
 /* user */
 .user-shell {
     background-image: url(../img/bg_about.webp);
@@ -846,12 +817,10 @@ body {
 @media screen and (min-width: 768px) {
     .last-img-box {
         background-image: url(../img/bg-last-pc.png);
-/*        background-image: url(../img/img_bottom_m.jpg);*/
         background-size: cover;
         background-position: 30% 27%;
     }
 }
-
 @media screen and (min-width: 768px) {
     .last-img-box {
         background-size: contain;
@@ -875,22 +844,6 @@ body {
         z-index: 1;
     }
 }
-    /*
-@media screen and (min-width: 768px) {
-    .last-img-box::after {
-        left: 349px;
-        top: 0;
-        width: 50px;
-        height: 100%;
-        background: linear-gradient(
-            to right,
-            transparent 0%,
-            rgb(255 255 255 / 70%) 70%,
-            #fff 100%
-        );
-    }
-}*/
-
 .last-copy-sp {
     font-family: "Shippori Mincho", serif;
     font-weight: 800;
